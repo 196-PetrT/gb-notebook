@@ -12,6 +12,7 @@ import static notebook.util.DBConnector.createDB;
 public class Main {
     public static void main(String[] args) {
         createDB();
+        // все что ниже можно спрятать во view
         FileOperation fileOperation = new FileOperation(DB_PATH);
         GBRepository repository = new UserRepository(fileOperation);
         UserController controller = new UserController(repository);
